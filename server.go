@@ -10,7 +10,7 @@ import (
 
 	"google.golang.org/grpc"
 	log "k8s.io/klog"
-	pluginapi "k8s.io/kubernetes/pkg/kubelet/apis/deviceplugin/v1beta1"
+	pluginapi "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1"
 )
 
 const (
@@ -266,4 +266,8 @@ func (m *RdmaDevicePlugin) Serve(resourceName string) error {
 	log.Infof("Registered device plugin with Kubelet")
 
 	return nil
+}
+
+func (m *RdmaDevicePlugin) GetPreferredAllocation(context.Context, *pluginapi.PreferredAllocationRequest) (*pluginapi.PreferredAllocationResponse, error) {
+	return &pluginapi.PreferredAllocationResponse{}, nil
 }

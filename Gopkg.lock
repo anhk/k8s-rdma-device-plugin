@@ -157,7 +157,7 @@
     "github.com/fsnotify/fsnotify",
     "google.golang.org/grpc",
     "k8s.io/klog",
-    "k8s.io/kubernetes/pkg/kubelet/apis/deviceplugin/v1beta1",
+    "k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
